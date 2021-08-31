@@ -1,4 +1,6 @@
 #DAT250-Oblig1 Document report
+In this report I will write about what I've done during this assignment, and how I set up the
+software environment to get familiar with Heroku.
 
 ##Installation of the software development environment (MacOS)
 
@@ -35,5 +37,13 @@
 
 2. Verifying Heroku using: `heroku --version`
 
-3. 
 
+
+##Experiment with Heroku
+To become familiar with Heroku, I followed the tutorial on
+[devcenter.heroku.com](https://devcenter.heroku.com/articles/getting-started-with-java).
+Through this tutorial, I learned how to deploy a java application to Heroku,
+in addition to run the application locally and in the cloud. I also learned about important files
+inside the project, how to provision add-ons to the app, so that features like logging (Papertrail) and databases is available.
+
+**URL to my project:** https://tranquil-caverns-26891.herokuapp.com/
