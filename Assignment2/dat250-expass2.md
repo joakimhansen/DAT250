@@ -21,8 +21,7 @@ Tutorial: [apache.org](https://db.apache.org/derby/papers/DerbyTut/index.html)
 ## Inspecting the database
 To examine the database created, I used Intellij´s Database-plugin. I connected it to
 the Apache Derby-relational database, and got an overview of the different tables created:
-![img.png](img.png)
-
+![img.png](Pictures/db-tables.png)
 
 
 
