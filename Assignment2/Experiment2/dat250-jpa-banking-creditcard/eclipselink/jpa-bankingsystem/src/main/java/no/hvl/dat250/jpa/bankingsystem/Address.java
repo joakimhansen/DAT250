@@ -1,7 +1,8 @@
 package no.hvl.dat250.jpa.bankingsystem;
 
 import javax.persistence.*;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
 //@Entity
 //@Embeddable
@@ -14,11 +15,8 @@ public class Address {
 
     private String street;
     private int number;
-    @ManyToMany(mappedBy = "addresses")
-    Set<Person> persons;
-
-//    @ManyToMany(mappedBy="address")
-//    private List<Person> person;
+    @ManyToMany()
+    List<Person> persons = new ArrayList<>();
 
     public String getStreet() {
         return street;
@@ -36,6 +34,13 @@ public class Address {
         this.number = number;
     }
 
+    public List<Person> getPersons() {
+        return persons;
+    }
+
+    public void setPersons(List<Person> persons) {
+        this.persons = persons;
+    }
 
     @Override
     public String toString() {

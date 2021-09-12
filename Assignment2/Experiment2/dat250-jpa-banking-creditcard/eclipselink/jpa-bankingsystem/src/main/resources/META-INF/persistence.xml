@@ -5,7 +5,6 @@
     <persistence-unit name="banking" transaction-type="RESOURCE_LOCAL">
         <class>no.hvl.dat250.jpa.bankingsystem.Person</class>
         <class>no.hvl.dat250.jpa.bankingsystem.Address</class>
-        <class>no.hvl.dat250.jpa.bankingsystem.PersonAddressKey</class>
         <class>no.hvl.dat250.jpa.bankingsystem.CreditCard</class>
         <class>no.hvl.dat250.jpa.bankingsystem.Bank</class>
         <class>no.hvl.dat250.jpa.bankingsystem.Pincode</class>

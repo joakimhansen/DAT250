@@ -23,47 +23,38 @@ public class Main {
         }
         System.out.println("Size: " + personList.size());
 
-        // create 5 new persons with addresses
-//        em.getTransaction().begin();
-//        for (int i=0; i<5; i++) {
-//            Person person = new Person();
-//            person.setName(nameGenerator());
-//
-//            Address address = new Address();
-//            address.setStreet(streetGenerator());
-//            address.setNumber(numberGenerator());
-//            person.setAddress(address);
-//
-//            em.persist(person);
-//        }
-//        em.getTransaction().commit();
-//        em.close();
+        // Creating a person
+        em.getTransaction().begin();
+        Person person = new Person();
+        person.setName("Max Mustermann");
 
-        // create 1 new person with address
-//        em.getTransaction().begin();
-//        Person person = new Person();
-//        person.setName(nameGenerator());
-//        person.addAddress(streetGenerator(), numberGenerator());
-//        em.persist(person);
-//        em.getTransaction().commit();
-//        em.close();
+        // Set the address
+        Address address = new Address();
+        address.setStreet("Inndalsveien");
+        address.setNumber(28);
+        address.getPersons().add(person);
+        person.getAddress().add(address);
+
+        // Add creditcard and pincode
+        CreditCard creditCard = new CreditCard();
+        creditCard.setNumber(12345);
+        creditCard.setBalance(-5000);
+        creditCard.setLimit(-10000);
+        Pincode pincode = new Pincode();
+        pincode.setPincode("123");
+        pincode.setCount(1);
+        creditCard.setPincode(pincode);
+        person.getCreditCards().add(creditCard);
+
+        // Add a bank
+        Bank bank = new Bank();
+        bank.getCreditCards().add(creditCard);
+
+
+        em.persist(person);
+        em.getTransaction().commit();
+        em.close();
 
     }
 
-    public static String nameGenerator() {
-        Random r = new Random();
-        String[] names = {"Ole", "Geir", "Per", "Lise", "Marie", "Magnus", "Torstein", "Andrea", "Julie"};
-        return names[r.nextInt(names.length)];
-    }
-
-    public static String streetGenerator() {
-        Random r = new Random();
-        String[] streets = {"Parkveien", "Fjøsangerveien", "Kanalveien", "Bergensveien", "Bryggen", "Minde", "Sentrum", "Flåten", "Nestun"};
-        return streets[r.nextInt(streets.length)];
-    }
-
-    public static int numberGenerator() {
-        Random r = new Random();
-        return r.nextInt(50);
-    }
 }

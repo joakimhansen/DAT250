@@ -1,8 +1,8 @@
 package no.hvl.dat250.jpa.bankingsystem;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Set;
 
 @Entity
 public class Person {
@@ -12,21 +12,12 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    @ManyToMany
-    @JoinTable(
-            name = "lives",
-            joinColumns = @JoinColumn(name = "person_id"),
-            inverseJoinColumns = @JoinColumn(name = "address_id"))
-    Set<Address> addresses;
+    @ManyToMany(mappedBy = "persons", cascade = CascadeType.PERSIST)
+    private List<Address> addresses = new ArrayList<>();
 
-    //@JoinColumn(name="creditCard_id")
-//    @OneToMany(mappedBy = "id")
-//    @JoinColumn(name="creditCard_id")
+    @OneToMany(mappedBy = "persons", cascade = CascadeType.PERSIST)
+    private List<CreditCard> creditCards = new ArrayList<>();
 
-    @OneToMany
-    @JoinColumn(name = "id")
-    private Set<CreditCard> creditCards;
-    
     public String getName() {
         return name;
     }
@@ -35,13 +26,22 @@ public class Person {
         this.name = name;
     }
 
-    public void setAddress(Set<Address> addresses) {
+    public void setAddress(List<Address> addresses) {
         this.addresses = addresses;
     }
 
-    public Set<Address> getAddress() {
+    public List<Address> getAddress() {
         return addresses;
     }
+
+    public List<CreditCard> getCreditCards() {
+        return creditCards;
+    }
+
+    public void setCreditCards(List<CreditCard> creditCards) {
+        this.creditCards = creditCards;
+    }
+
 
     @Override
     public String toString() {

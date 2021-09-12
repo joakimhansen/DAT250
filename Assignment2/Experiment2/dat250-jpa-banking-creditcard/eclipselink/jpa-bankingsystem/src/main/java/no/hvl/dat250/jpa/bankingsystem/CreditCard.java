@@ -16,8 +16,42 @@ public class CreditCard {
     @JoinColumn(name = "pincode_id")
     private Pincode pincode;
 
-    //    @ManyToOne
-//    @JoinColumn(name="owner_id")
+    @ManyToOne
+    private Person persons;
+
+    @ManyToOne
+    private Bank bank;
 
 
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public void setLimit(int limit) {
+        this.limit = limit;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+    public void setPincode(Pincode pincode) {
+        this.pincode = pincode;
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public int getLimit() {
+        return limit;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public Pincode getPincode() {
+        return pincode;
+    }
 }

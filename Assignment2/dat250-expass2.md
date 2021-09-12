@@ -2,7 +2,9 @@
 
 
 
-## Installation: Derby Database
+## Experiment 1
+
+###Installation: Derby Database
 Tutorial: [apache.org](https://db.apache.org/derby/papers/DerbyTut/index.html)
 1. Download [db-derby-10.15.2.0-bin.tar.gz](https://db.apache.org/derby/releases/release-10_15_2_0.cgi)
 2. Extract the zip file into a desired folder
@@ -17,13 +19,18 @@ Tutorial: [apache.org](https://db.apache.org/derby/papers/DerbyTut/index.html)
 
     `. setEmbeddedCP`
 
+####Tables created in the sample project:
+![](Images/db-tables_ex1.png)
+
+
 
 ## Inspecting the database
-To examine the database created, I used Intellij´s Database-plugin. I connected it to
+To examine the database created, I used Intellij´s database explorer. I connected it to
 the Apache Derby-relational database, and got an overview of the different tables created:
-![](Pictures/db-tables.png)
+![](Images/db-tables_ex2.png)
 
-
+After defining the different relationships between the entities, I could inspect the visualization diagram created by Intellij:
+![](Images/domain-model.png)
 
 
 ### Links

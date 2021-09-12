@@ -11,5 +11,21 @@ public class Pincode {
     private String pincode;
     private int count;
 
+    public String getPincode() {
+        return pincode;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setPincode(String pincode) {
+        this.pincode = pincode;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
 
 }
