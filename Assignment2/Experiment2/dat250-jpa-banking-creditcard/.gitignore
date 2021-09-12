@@ -16,6 +16,7 @@
 # Maven
 log/
 target/
+testdb/
 
 # Compiled class file
 *.class
