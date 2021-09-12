@@ -23,8 +23,9 @@ Tutorial: [apache.org](https://db.apache.org/derby/papers/DerbyTut/index.html)
 ![](Images/db-tables_ex1.png)
 
 
+## Experiment 2
 
-## Inspecting the database
+### Inspecting the database
 To examine the database created, I used Intellij´s database explorer. I connected it to
 the Apache Derby-relational database, and got an overview of the different tables created:
 ![](Images/db-tables_ex2.png)
