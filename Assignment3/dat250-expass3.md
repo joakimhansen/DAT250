@@ -20,13 +20,14 @@ Delete documents:
 ![](Images/delete.png)
 
 Bulk Write operations:
-![](Images/bulkWrite.png)
+![](Images/bulk_write.png)
 
 
 ## Experiment 2
 Using map-reduce aggregation to get the sum of the quantity-field by mapping
 the customer-id to the quantity-field. Got a problem where the qty-value
 is NaN.
+
 ![](Images/map_reduce.png)
 
 ![](Images/sum_of_qty.png)
