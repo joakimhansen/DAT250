@@ -12,7 +12,7 @@ public class CreditCard {
     private int limit;
     private int balance;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "pincode_id")
     private Pincode pincode;
 
@@ -53,5 +53,13 @@ public class CreditCard {
 
     public Pincode getPincode() {
         return pincode;
+    }
+
+    public Bank getBank() {
+        return bank;
+    }
+
+    public void setBank(Bank bank) {
+        this.bank = bank;
     }
 }

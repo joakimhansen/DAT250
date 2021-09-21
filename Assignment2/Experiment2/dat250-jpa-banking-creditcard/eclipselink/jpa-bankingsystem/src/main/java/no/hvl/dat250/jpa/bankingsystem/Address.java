@@ -15,6 +15,7 @@ public class Address {
 
     private String street;
     private int number;
+
     @ManyToMany()
     List<Person> persons = new ArrayList<>();
 

@@ -2,6 +2,7 @@ package no.hvl.dat250.jpa.bankingsystem;
 
 import javax.persistence.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -13,16 +14,16 @@ public class Bank {
 
     @OneToMany(
             mappedBy = "bank",
-            cascade = CascadeType.ALL,
+            cascade = CascadeType.PERSIST,
             orphanRemoval = true
     )
-    private Set<CreditCard> creditCards;
+    private List<CreditCard> creditCards = new ArrayList<>();
 
-    public Set<CreditCard> getCreditCards() {
+    public List<CreditCard> getCreditCards() {
         return creditCards;
     }
 
-    public void setCreditCards(Set<CreditCard> creditCards) {
+    public void setCreditCards(List<CreditCard> creditCards) {
         this.creditCards = creditCards;
     }
 

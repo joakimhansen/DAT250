@@ -46,10 +46,12 @@ public class Main {
         creditCard.setPincode(pincode);
         person.getCreditCards().add(creditCard);
 
-        // Add a bank
-        Bank bank = new Bank();
-        bank.getCreditCards().add(creditCard);
 
+        // Add a bank
+//        Bank bank = new Bank();
+//        bank.setName("Pengebank");
+//        bank.getCreditCards().add(creditCard);
+//        creditCard.setBank(bank);
 
         em.persist(person);
         em.getTransaction().commit();

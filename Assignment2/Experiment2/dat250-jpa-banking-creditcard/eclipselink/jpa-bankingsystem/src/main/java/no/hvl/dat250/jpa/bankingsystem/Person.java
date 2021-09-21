@@ -12,6 +12,7 @@ public class Person {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
     @ManyToMany(mappedBy = "persons", cascade = CascadeType.PERSIST)
     private List<Address> addresses = new ArrayList<>();
 
