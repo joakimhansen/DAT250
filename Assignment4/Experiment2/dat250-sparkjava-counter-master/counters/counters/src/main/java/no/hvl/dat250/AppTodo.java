@@ -1,6 +1,4 @@
-package no.hvl.dat110.rest.counters;
-
-import com.google.gson.Gson;
+package no.hvl.dat250;
 
 import static spark.Spark.*;
 
