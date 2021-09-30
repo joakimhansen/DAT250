@@ -1,4 +1,4 @@
-# DAT250-Assignment 4 Document report
+# DAT250-Assignment 4 Short report
 
 I had no technical problems during installation.
 ## Links
