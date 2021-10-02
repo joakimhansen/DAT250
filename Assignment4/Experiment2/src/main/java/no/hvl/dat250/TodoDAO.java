@@ -8,10 +8,11 @@ import java.util.List;
 
 public class TodoDAO {
 
+    private static final String PERSISTENCE_UNIT_NAME = "todos";
     private EntityManager em;
 
     public TodoDAO() {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("todos");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
         em = emf.createEntityManager();
     }
 

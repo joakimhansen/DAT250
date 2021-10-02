@@ -30,7 +30,7 @@ public class AppTodo {
         });
 
         // GET todo
-        get("/todos", (req, res) -> {
+        get("/todos/:id", (req, res) -> {
             return dao.getTodo(Integer.parseInt(req.params(":id"))).toJson();
         });
 

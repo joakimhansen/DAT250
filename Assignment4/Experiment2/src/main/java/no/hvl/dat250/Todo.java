@@ -10,9 +10,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.util.concurrent.atomic.AtomicLong;
 
 @Entity
 public class Todo {
+
+//    private AtomicLong idd = 0;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
