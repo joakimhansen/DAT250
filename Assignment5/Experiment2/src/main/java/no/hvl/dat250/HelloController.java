@@ -1,12 +1,12 @@
-package no.hvl.dat250.Experiment2;
+package no.hvl.dat250;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class app {
+public class HelloController {
     @GetMapping("/")
-    String home() {
-        return "Hello, World!";
+    public String index() {
+        return "Greetings from Spring Boot!";
     }
 }

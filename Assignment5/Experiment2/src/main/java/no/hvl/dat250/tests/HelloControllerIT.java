@@ -1,4 +1,4 @@
-package no.hvl.dat250.Experiment2.tests;
+package no.hvl.dat250.tests;
 
 import org.junit.jupiter.api.Test;
 
